@@ -1,0 +1,13 @@
+.section-about {
+    background-color: var(--color-grey-light-1);
+    margin-top: -20vh;
+    padding: 25rem 0;
+
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+
+    .about__textbox1 {
+        text-align: center;
+    }
+}

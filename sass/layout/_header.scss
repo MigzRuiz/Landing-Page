@@ -4,6 +4,7 @@
     background-color: var(--color-secondary);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
 
     .navbar {
         display: flex;
@@ -65,8 +66,9 @@
     }
 
     &__textbox {
-        margin-left: 20%;
-        margin-top: 10%;
-        height: 40rem;
+        position: absolute;
+        left: 25%;
+        top: 60%;
+        transform: translate(-50%, -50%);
     }
 }

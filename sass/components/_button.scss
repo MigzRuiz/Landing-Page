@@ -1,34 +1,39 @@
 .btn {
-    font-size: $default-font-size;
-    text-transform: uppercase;
-    padding: 1.5rem 4rem;
-    background:none;
 
-    border-radius: .8rem;
-    letter-spacing: .6rem;
-    color: var(--color-grey-light-1);
+/*
+    &, 
+    &:link, 
+    &:visited {
+        //Button Initial styles
+        font-size: $default-font-size;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        background:none;
+        border-radius: .8rem;
+        backface-visibility: hidden;
+        letter-spacing: .6rem;
+        cursor: pointer;
 
-    border: 1px solid var(--color-grey-light-1);
-    cursor: pointer;
-    position: relative;
-
-    transition:color 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    transform-origin: right;
-    z-index: 8;
-    overflow: hidden;
-
-    &:hover {
-        color: var(--color-secondary);
+        //Setting for Animation
+        position: relative;
+        transition: color 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+                    border .2s;
+        transform-origin: right;
+        overflow: hidden;   //for rounded corners
+        z-index: 8;
     }
+*/
 
+/*
+    //Color Sliding Animation
     &::after {
         content:"";
         position: absolute;
         top:0;
         left:0;
         width:0;
-        height: 100%;
-        background-image: linear-gradient(to right, var(--color-primary), var(--color-teal));
+        height: 100%;    
         transform-origin: left;
         transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);  
         z-index:-1; 
@@ -38,9 +43,34 @@
         width:100%;   
     }
 
-    &:active,
-    &:focus {
-        outline: none;
-    }    
+    //Setting color variance
+    &-white {
+        color: var(--color-grey-light-2);
+        border: 1px solid var(--color-grey-light-2);
+        
+        &:hover {
+            color: var(--color-secondary);
+            border: 1px solid var(--color-secondary);
+        }
+
+        &::after {
+            background-image: linear-gradient(to right, var(--color-primary), var(--color-teal));
+        }
+    }
+
+    &-dark {
+        color: var(--color-secondary);
+        border: 1px solid var(--color-secondary);
+        
+        &:hover {
+            color: var(--color-secondary);
+            border: 1px solid var(--color-grey-light-1);
+        }
+
+        &::after {
+            background-image: linear-gradient(to right, var(--color-primary), var(--color-teal));
+        }
+    }
+*/
 }
 

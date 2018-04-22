@@ -4,7 +4,7 @@ body {
     font-weight: 400;
     font-size: $default-font-size;
     line-height: 1.7;
-    color: var(--color-grey-light-1);
+    color: var(--color-grey-light-2);
 }
 
 //Links base styles
@@ -16,8 +16,7 @@ ul {
 *:visited {
     color:inherit;
     text-transform: uppercase;            
-    text-decoration: none; 
-    display: block;      
+    text-decoration: none;      
 }
 
 //Specific Link Styles
@@ -42,5 +41,18 @@ ul {
     span {
         font-size:7rem;
         font-weight: 300;
+    }
+}
+
+.heading-secondary {
+    color: var(--color-secondary-2);
+    font-family: 'adobe-caslon-pro', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 6rem;
+    line-height: 1;
+
+    span{
+        color: var(--color-primary);
     }
 }
