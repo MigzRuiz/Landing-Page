@@ -20,12 +20,27 @@ ul {
     display: block;      
 }
 
-//specific link styles
+//Specific Link Styles
 .navbar {
     .nav {
         &__link:link,
         &__link:visited {
             font-style: italic;
         }
+    }
+}
+
+//H1 Heading Primary Styles
+.heading-primary {
+    color: var(--color-primary);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 15rem;
+    letter-spacing: -.5rem;
+    line-height: .8;
+
+    span {
+        font-size:7rem;
+        font-weight: 300;
     }
 }

@@ -40,6 +40,31 @@ ul {
 .navbar .nav__link:link, .navbar .nav__link:visited {
   font-style: italic; }
 
+.heading-primary {
+  color: var(--color-primary);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 15rem;
+  letter-spacing: -.5rem;
+  line-height: .8; }
+  .heading-primary span {
+    font-size: 7rem;
+    font-weight: 300; }
+
+.btn {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  background-color: transparent;
+  border-radius: .8rem;
+  letter-spacing: .6rem;
+  color: var(--color-grey-light-1);
+  border: 1px solid var(--color-grey-light-1);
+  cursor: pointer; }
+
+.btn:active {
+  outline: none; }
+
 .header {
   height: 95vh;
   background-color: var(--color-secondary); }
@@ -75,3 +100,9 @@ ul {
       .header .navbar .nav__link:link, .header .navbar .nav__link:visited {
         position: relative;
         z-index: 10; }
+      .header .navbar .nav__link:hover {
+        transform: translateY(0.1rem); }
+  .header__textbox {
+    margin-left: 20%;
+    margin-top: 10%;
+    height: 40rem; }
