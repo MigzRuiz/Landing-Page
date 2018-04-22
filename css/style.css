@@ -3,6 +3,7 @@
   --color-secondary:      #435058;
   --color-secondary-light:#849eae;
   --color-secondary-dark: #333333;
+  --color-teal:           #1bf2da;
   --color-grey-light-1:   #ededed;
   --color-black:      #000;
   --color-white:      #fff; }
@@ -51,23 +52,47 @@ ul {
     font-size: 7rem;
     font-weight: 300; }
 
+.u-margin-top-medium {
+  margin-top: 4rem !important; }
+
 .btn {
   font-size: 1.6rem;
   text-transform: uppercase;
   padding: 1.5rem 4rem;
-  background-color: transparent;
+  background: none;
   border-radius: .8rem;
   letter-spacing: .6rem;
   color: var(--color-grey-light-1);
   border: 1px solid var(--color-grey-light-1);
-  cursor: pointer; }
-
-.btn:active {
-  outline: none; }
+  cursor: pointer;
+  position: relative;
+  transition: color 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transform-origin: right;
+  z-index: 8;
+  overflow: hidden; }
+  .btn:hover {
+    color: var(--color-secondary); }
+  .btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-teal));
+    transform-origin: left;
+    transition: width 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    z-index: -1; }
+  .btn:hover::after {
+    width: 100%; }
+  .btn:active, .btn:focus {
+    outline: none; }
 
 .header {
   height: 95vh;
-  background-color: var(--color-secondary); }
+  background-color: var(--color-secondary);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header .navbar {
     display: flex;
     justify-content: space-around;
@@ -95,13 +120,13 @@ ul {
         transition: transform 0.2s, width 0.4s cubic-bezier(1, 0.02, 0.13, 1.42) 0.2s; }
       .header .navbar .nav__items:hover::before {
         transform: scaleY(1);
-        width: 115%;
-        color: var(--color-secondary-light); }
+        width: 115%; }
       .header .navbar .nav__link:link, .header .navbar .nav__link:visited {
         position: relative;
-        z-index: 10; }
+        z-index: 10;
+        transition: all .2s; }
       .header .navbar .nav__link:hover {
-        transform: translateY(0.1rem); }
+        transform: translateY(-0.2rem); }
   .header__textbox {
     margin-left: 20%;
     margin-top: 10%;

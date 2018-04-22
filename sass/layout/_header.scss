@@ -2,6 +2,8 @@
     //Setting header properties//
     height: 95vh;
     background-color: var(--color-secondary);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
     .navbar {
         display: flex;
@@ -47,17 +49,17 @@
             &__items:hover::before {
                 transform: scaleY(1);
                 width: 115%;
-                color: var(--color-secondary-light);
             }
 
             &__link:link,
             &__link:visited {
                 position: relative;
                 z-index: 10;
+                transition: all .2s;
             }
 
             &__link:hover {
-                transform: translateY(.1rem);
+                transform: translateY(-.2rem);
             }
         }
     }
