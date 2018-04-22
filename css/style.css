@@ -64,90 +64,58 @@ ul {
   .heading-secondary span {
     color: var(--color-primary); }
 
-.u-margin-left-small {
-  margin-left: 2rem !important; }
-
-.u-margin-top-small {
-  margin-top: 2rem !important; }
-
-.u-margin-top-medium {
-  margin-top: 4rem !important; }
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
 
 .u-btn-small {
   font-size: 1rem !important; }
 
-.btn {
-  /*
-    &, 
-    &:link, 
-    &:visited {
-        //Button Initial styles
-        font-size: $default-font-size;
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 1.5rem 4rem;
-        background:none;
-        border-radius: .8rem;
-        backface-visibility: hidden;
-        letter-spacing: .6rem;
-        cursor: pointer;
+.btn, .btn:link, .btn:visited {
+  font-size: 1.6rem;
+  padding: 1.5rem 4rem;
+  -moz-border-radius: .8rem;
+  border-radius: .8rem;
+  overflow: hidden;
+  letter-spacing: .6rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955), border 0.2s;
+  transform-origin: right;
+  z-index: 10; }
 
-        //Setting for Animation
-        position: relative;
-        transition: color 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955),
-                    border .2s;
-        transform-origin: right;
-        overflow: hidden;   //for rounded corners
-        z-index: 8;
-    }
-*/
-  /*
-    //Color Sliding Animation
-    &::after {
-        content:"";
-        position: absolute;
-        top:0;
-        left:0;
-        width:0;
-        height: 100%;    
-        transform-origin: left;
-        transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);  
-        z-index:-1; 
-    }
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 0;
+  height: 100%;
+  transform-origin: left;
+  transition: width 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
 
-    &:hover::after {
-        width:100%;   
-    }
+.btn:hover::after {
+  width: 100%;
+  border-radius: .8rem; }
 
-    //Setting color variance
-    &-white {
-        color: var(--color-grey-light-2);
-        border: 1px solid var(--color-grey-light-2);
-        
-        &:hover {
-            color: var(--color-secondary);
-            border: 1px solid var(--color-secondary);
-        }
+.btn-white {
+  color: var(--color-grey-light-1);
+  border: 1px solid var(--color-grey-light-1); }
+  .btn-white:hover {
+    color: var(--color-secondary);
+    border: 1px solid var(--color-secondary); }
+  .btn-white::after {
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-teal)); }
 
-        &::after {
-            background-image: linear-gradient(to right, var(--color-primary), var(--color-teal));
-        }
-    }
-
-    &-dark {
-        color: var(--color-secondary);
-        border: 1px solid var(--color-secondary);
-        
-        &:hover {
-            color: var(--color-secondary);
-            border: 1px solid var(--color-grey-light-1);
-        }
-
-        &::after {
-            background-image: linear-gradient(to right, var(--color-primary), var(--color-teal));
-        }
-    }
-*/ }
+.btn-dark {
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary); }
+  .btn-dark:hover {
+    color: var(--color-secondary);
+    border: 1px solid var(--color-grey-light-1); }
+  .btn-dark::after {
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-teal)); }
 
 .header {
   height: 95vh;

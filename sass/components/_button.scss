@@ -1,61 +1,66 @@
 .btn {
-
-/*
-    &, 
-    &:link, 
+    &,
+    &:link,
     &:visited {
-        //Button Initial styles
+        //Button Initial Style
         font-size: $default-font-size;
-        text-transform: uppercase;
-        text-decoration: none;
         padding: 1.5rem 4rem;
-        background:none;
+        -moz-border-radius: .8rem;
         border-radius: .8rem;
-        backface-visibility: hidden;
+        overflow: hidden;   //For the After Color to have Rounded Borders
         letter-spacing: .6rem;
         cursor: pointer;
 
-        //Setting for Animation
+        //Animation
         position: relative;
+        overflow: hidden;   //For the After Color to have Rounded Borders => This doesn't work
         transition: color 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955),
                     border .2s;
         transform-origin: right;
-        overflow: hidden;   //for rounded corners
-        z-index: 8;
+        z-index: 10;
     }
-*/
 
-/*
-    //Color Sliding Animation
+    //Creating the Sliding Animation
     &::after {
-        content:"";
+        //For Pseudo Properties
+        content: "";
         position: absolute;
+        //Initial Position of the Animation
         top:0;
         left:0;
-        width:0;
-        height: 100%;    
+        z-index: -2;
+
+        //Initial Dimension of the Animation
+        width: 0;
+        height: 100%;
+
+        //Animation Behavior
+        //It starts with left and the width will slowly fill the button
         transform-origin: left;
-        transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);  
-        z-index:-1; 
+        transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     }
 
+    //Animation Triggers when Hovered After
     &:hover::after {
-        width:100%;   
+        width: 100%;
+        border-radius: .8rem;
     }
 
-    //Setting color variance
+    //Color Variance
     &-white {
-        color: var(--color-grey-light-2);
-        border: 1px solid var(--color-grey-light-2);
-        
+        color: var(--color-grey-light-1);
+        border: 1px solid var(--color-grey-light-1);
+
         &:hover {
             color: var(--color-secondary);
             border: 1px solid var(--color-secondary);
         }
 
+        //For Animation Coloring
         &::after {
             background-image: linear-gradient(to right, var(--color-primary), var(--color-teal));
         }
+
     }
 
     &-dark {
@@ -71,6 +76,4 @@
             background-image: linear-gradient(to right, var(--color-primary), var(--color-teal));
         }
     }
-*/
 }
-
