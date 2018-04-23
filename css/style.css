@@ -59,10 +59,15 @@ ul {
   font-family: 'adobe-caslon-pro', sans-serif;
   font-weight: 600;
   font-style: italic;
-  font-size: 6rem;
+  font-size: 8rem;
   line-height: 1; }
   .heading-secondary span {
     color: var(--color-primary); }
+
+.section-about .about__info {
+  color: var(--color-secondary-2);
+  font-size: 2.5rem;
+  font-weight: 200; }
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important; }
@@ -83,6 +88,9 @@ ul {
   transition: color 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955), border 0.2s;
   transform-origin: right;
   z-index: 10; }
+
+.btn:active, .btn:focus {
+  outline: none; }
 
 .btn::after {
   content: "";
@@ -161,7 +169,11 @@ ul {
     position: absolute;
     left: 25%;
     top: 60%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column; }
+    .header__textbox a {
+      align-self: center; }
 
 .section-about {
   background-color: var(--color-grey-light-1);
@@ -170,5 +182,10 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .section-about .about__textbox1 {
+  .section-about .about__textbox-1 {
     text-align: center; }
+  .section-about .about__textbox-2 {
+    width: 42rem;
+    margin-left: 20rem; }
+    .section-about .about__textbox-2 .about__info .next-line {
+      display: block; }

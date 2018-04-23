@@ -20,6 +20,11 @@
         z-index: 10;
     }
 
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
     //Creating the Sliding Animation
     &::after {
         //For Pseudo Properties

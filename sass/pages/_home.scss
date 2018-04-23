@@ -7,7 +7,16 @@
     align-items: center;
     justify-content: center;
 
-    .about__textbox1 {
+    .about__textbox-1 {
         text-align: center;
+    }
+    .about__textbox-2 {
+        width: 42rem;
+        margin-left: 20rem;
+        .about__info {
+            .next-line {
+                display: block;
+            }
+        }
     }
 }
